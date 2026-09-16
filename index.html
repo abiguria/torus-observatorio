@@ -6,16 +6,16 @@
 <title>TORUS · Selección de sitio — Observatorio / Telescopio online</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Mulish:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0a0e17; --bg2:#0d1320; --panel:#121a2c; --panel2:#19243c;
     --line:#283650; --line-soft:#1d2840;
-    --ink:#ece9e0; --muted:#9aa6bd; --muted2:#717f9a;
+    --ink:#ece9e0; --muted:#b8c1d4; --muted2:#98a4bc;
     --gold:#e6b24c; --gold-soft:#f3d291; --blue:#7aa6dc; --red:#e8633f; --green:#7fc28e;
-    --serif:"Avenir Next","Avenir","Mulish","Segoe UI",sans-serif;
+    --serif:"Avenir Next","Avenir","Source Sans 3","Segoe UI",sans-serif;
     --disp:"Century Gothic","Jost","Avenir Next",sans-serif;
-    --mono:"Avenir Next","Avenir","Mulish","Segoe UI",sans-serif;
+    --mono:"Avenir Next","Avenir","Source Sans 3","Segoe UI",sans-serif;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
@@ -24,8 +24,8 @@
       radial-gradient(1200px 700px at 78% -8%, rgba(122,166,220,.10), transparent 60%),
       radial-gradient(900px 600px at 8% 102%, rgba(230,178,76,.08), transparent 55%),
       var(--bg);
-    color:var(--ink); font-family:var(--serif); font-weight:300;
-    line-height:1.6; -webkit-font-smoothing:antialiased; font-variant-numeric:tabular-nums;
+    color:var(--ink); font-family:var(--serif); font-weight:400;
+    line-height:1.7; font-variant-numeric:tabular-nums;
   }
   .wrap{max-width:1040px; margin:0 auto; padding:0 26px 90px}
   .stars{position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.5}
@@ -47,7 +47,7 @@
   h1{font-family:var(--disp); font-weight:500; font-size:clamp(34px,6vw,62px);
     line-height:1.02; margin:22px 0 8px; letter-spacing:-.015em}
   h1 em{font-style:italic; color:var(--gold-soft); font-weight:300}
-  .lede{font-size:18px; color:var(--muted); max-width:62ch; font-weight:300}
+  .lede{font-size:18px; color:var(--muted); max-width:62ch; font-weight:400}
   .metarow{display:flex; flex-wrap:wrap; gap:10px 30px; margin-top:26px;
     font-family:var(--mono); font-size:12px; color:var(--muted2); letter-spacing:.04em}
   .metarow b{color:var(--ink); font-weight:500}
@@ -57,7 +57,7 @@
   .sn{font-family:var(--mono); font-size:12px; color:var(--gold); letter-spacing:.2em}
   h2{font-family:var(--disp); font-weight:500; font-size:clamp(23px,3.4vw,32px);
     margin:0; letter-spacing:-.01em}
-  .sub{color:var(--muted); font-size:15.5px; max-width:74ch; margin:4px 0 26px}
+  .sub{color:var(--muted); font-size:16.5px; max-width:74ch; margin:4px 0 26px}
   p{max-width:74ch}
   p .hl{color:var(--gold-soft)}
   strong{color:var(--ink); font-weight:500}
@@ -68,7 +68,7 @@
   .reco .badge{font-family:var(--mono); font-size:11px; letter-spacing:.22em; color:var(--gold);
     writing-mode:vertical-rl; transform:rotate(180deg); text-transform:uppercase; opacity:.8}
   .reco h3{font-family:var(--disp); font-weight:500; font-size:24px; margin:0 0 6px; color:var(--gold-soft)}
-  .reco p{margin:0; color:var(--ink); font-size:15.5px; max-width:none}
+  .reco p{margin:0; color:var(--ink); font-size:16px; max-width:none}
 
   .grid2{display:grid; grid-template-columns:1.05fr .95fr; gap:30px; align-items:start}
   .card{background:var(--panel); border:1px solid var(--line); border-radius:13px; padding:24px}
@@ -81,16 +81,16 @@
   .flag{color:var(--red)}
 
   figure{margin:0}
-  figcaption{font-family:var(--mono); font-size:11px; color:var(--muted2); letter-spacing:.05em; margin-top:10px}
+  figcaption{font-family:var(--mono); font-size:12px; color:var(--muted2); letter-spacing:.05em; margin-top:10px}
   svg{display:block; width:100%; height:auto}
 
   .mapbox{background:var(--bg2); border:1px solid var(--line); border-radius:14px; padding:14px; margin-top:6px}
   .legend{display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:14px;
-    font-family:var(--mono); font-size:11.5px; color:var(--muted); letter-spacing:.03em}
+    font-family:var(--mono); font-size:12.5px; color:var(--muted); letter-spacing:.03em}
   .legend span{display:inline-flex; align-items:center; gap:7px}
   .dot{width:11px; height:11px; border-radius:50%}
 
-  table{width:100%; border-collapse:collapse; margin-top:8px; font-size:14px}
+  table{width:100%; border-collapse:collapse; margin-top:8px; font-size:15px}
   th,td{padding:11px 12px; text-align:center; border-bottom:1px solid var(--line-soft); vertical-align:top}
   th{font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.12em; text-transform:uppercase;
     color:var(--muted); border-bottom:1px solid var(--line)}
@@ -132,7 +132,7 @@
   .brow.tot{border-top:1px solid var(--line); border-bottom:none; margin-top:6px; padding-top:12px}
   .brow.tot .lbl{color:var(--ink); font-weight:500}
 
-  .note{font-size:13px; color:var(--muted2); font-family:var(--mono); letter-spacing:.02em;
+  .note{font-size:13.5px; color:var(--muted2); font-family:var(--mono); letter-spacing:.02em;
     border-left:2px solid var(--line); padding:4px 0 4px 14px; margin-top:18px; max-width:78ch}
 
   footer{padding:38px 0 0; color:var(--muted2); font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; line-height:1.8}
@@ -208,7 +208,7 @@
             <line x1="40" y1="20" x2="40" y2="140"/>
             <line x1="40" y1="140" x2="380" y2="140"/>
           </g>
-          <g font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="9" fill="#717f9a">
+          <g font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="9" fill="#717f9a">
             <text x="36" y="43" text-anchor="end">19.88</text>
             <text x="36" y="103" text-anchor="end">19.79</text>
             <text x="36" y="143" text-anchor="end">19.70</text>
@@ -224,7 +224,7 @@
             <circle cx="212.3" cy="127" r="2.4"/><circle cx="335.4" cy="127" r="2.4"/>
             <circle cx="360" cy="47" r="2.4"/>
           </g>
-          <text x="372" y="44" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="9" fill="#e8633f" text-anchor="end">tendencia +0.63 %/año</text>
+          <text x="372" y="44" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="9" fill="#e8633f" text-anchor="end">tendencia +0.63 %/año</text>
         </svg>
         <figcaption>Eje invertido: más arriba = más oscuro (mejor). La banda 19.7–19.9 mantiene el sitio en Bortle ~5 toda la serie.</figcaption>
       </figure>
@@ -267,7 +267,7 @@
           </radialGradient>
         </defs>
         <rect x="0" y="0" width="1000" height="520" fill="#070b13"/>
-        <g stroke="#1d2840" stroke-width="1" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="10" fill="#4a5772">
+        <g stroke="#1d2840" stroke-width="1" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="10" fill="#4a5772">
           <line x1="214" y1="0" x2="214" y2="520"/><text x="218" y="14">91°W</text>
           <line x1="571" y1="0" x2="571" y2="520"/><text x="575" y="14">90.5°W</text>
           <line x1="929" y1="0" x2="929" y2="520"/><text x="933" y="14">90°W</text>
@@ -278,7 +278,7 @@
         <rect x="0" y="0" width="1000" height="520" fill="url(#dome2)"/>
 
         <path d="M40,222 q22,-16 48,-6 q26,10 22,26 q-6,20 -34,18 q-30,-2 -40,-16 q-8,-12 4,-22 Z" fill="#1d3a55" stroke="#2f567a" stroke-width="1"/>
-        <text x="62" y="248" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="10" fill="#6f93b8" text-anchor="middle">L. Atitlán</text>
+        <text x="62" y="248" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="10" fill="#6f93b8" text-anchor="middle">L. Atitlán</text>
 
         <g fill="#2c3954" stroke="#3c4d6e" stroke-width="1">
           <path d="M300,371 l11,-20 l11,20 Z"/>
@@ -286,7 +286,7 @@
           <path d="M398,397 l10,-18 l10,18 Z"/>
           <path d="M499,460 l9,-16 l9,16 Z"/>
         </g>
-        <g font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="9" fill="#5a688a">
+        <g font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="9" fill="#5a688a">
           <text x="322" y="349">Acatenango</text>
           <text x="420" y="383">Agua</text>
           <text x="519" y="450">Pacaya</text>
@@ -298,7 +298,7 @@
           <line x1="566" y1="271" x2="214" y2="149" stroke="#e6b24c" opacity=".7"/>
           <line x1="566" y1="271" x2="807" y2="334" stroke="#7aa6dc" opacity=".6"/>
         </g>
-        <g font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="10" fill="#9aa6bd">
+        <g font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="10" fill="#9aa6bd">
           <text x="372" y="248" text-anchor="middle">~1.25 h</text>
           <text x="372" y="200" text-anchor="middle">~1.5–1.75 h</text>
           <text x="690" y="296" text-anchor="middle">~2 h</text>
@@ -306,44 +306,44 @@
 
         <circle cx="566" cy="271" r="9" fill="#ff7a4a" opacity=".25"/>
         <circle cx="566" cy="271" r="4.5" fill="#ffd2a8"/>
-        <text x="566" y="258" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="15" fill="#ffe6cf" text-anchor="middle" font-weight="500">Ciudad de Guatemala</text>
+        <text x="566" y="258" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="15" fill="#ffe6cf" text-anchor="middle" font-weight="500">Ciudad de Guatemala</text>
 
         <g>
           <rect x="469" y="275" width="16" height="16" rx="2" fill="none" stroke="#e6b24c" stroke-width="2" transform="rotate(45 477 283)"/>
           <circle cx="477" cy="283" r="3" fill="#e6b24c"/>
-          <text x="477" y="311" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="11" fill="#f3d291" text-anchor="middle">BASE · San Lucas</text>
-          <text x="477" y="324" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="9.5" fill="#9aa6bd" text-anchor="middle">B5 · 1,912 m</text>
+          <text x="477" y="311" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="11" fill="#f3d291" text-anchor="middle">BASE · San Lucas</text>
+          <text x="477" y="324" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="9.5" fill="#9aa6bd" text-anchor="middle">B5 · 1,912 m</text>
         </g>
 
         <g>
           <circle cx="214" cy="149" r="14" fill="#e6b24c" opacity=".18"/>
           <circle cx="214" cy="149" r="9" fill="#e6b24c"/>
-          <text x="214" y="153" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="11" font-weight="500" fill="#1a1206" text-anchor="middle">2</text>
-          <text x="214" y="126" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="14" font-weight="500" fill="#f3d291" text-anchor="middle">Tecpán–Santa Apolonia</text>
-          <text x="214" y="171" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="9.5" fill="#9aa6bd" text-anchor="middle">B3–4 · 2,400–2,900 m ★</text>
+          <text x="214" y="153" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="11" font-weight="500" fill="#1a1206" text-anchor="middle">2</text>
+          <text x="214" y="126" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="14" font-weight="500" fill="#f3d291" text-anchor="middle">Tecpán–Santa Apolonia</text>
+          <text x="214" y="171" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="9.5" fill="#9aa6bd" text-anchor="middle">B3–4 · 2,400–2,900 m ★</text>
         </g>
         <g>
           <circle cx="207" cy="238" r="8" fill="#7aa6dc"/>
-          <text x="207" y="242" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="11" font-weight="500" fill="#0a1322" text-anchor="middle">1</text>
-          <text x="207" y="262" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="11" fill="#cfe0f2" text-anchor="middle">Patzún / Patzicía</text>
-          <text x="207" y="275" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="9.5" fill="#9aa6bd" text-anchor="middle">B4 · 2,200 m</text>
+          <text x="207" y="242" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="11" font-weight="500" fill="#0a1322" text-anchor="middle">1</text>
+          <text x="207" y="262" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="11" fill="#cfe0f2" text-anchor="middle">Patzún / Patzicía</text>
+          <text x="207" y="275" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="9.5" fill="#9aa6bd" text-anchor="middle">B4 · 2,200 m</text>
         </g>
         <g>
           <circle cx="807" cy="334" r="8" fill="#7aa6dc"/>
-          <text x="807" y="338" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="11" font-weight="500" fill="#0a1322" text-anchor="middle">3</text>
-          <text x="807" y="358" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="11" fill="#cfe0f2" text-anchor="middle">Mataquescuintla</text>
-          <text x="807" y="371" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="9.5" fill="#9aa6bd" text-anchor="middle">B4 · 2,000–2,200 m</text>
+          <text x="807" y="338" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="11" font-weight="500" fill="#0a1322" text-anchor="middle">3</text>
+          <text x="807" y="358" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="11" fill="#cfe0f2" text-anchor="middle">Mataquescuintla</text>
+          <text x="807" y="371" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="9.5" fill="#9aa6bd" text-anchor="middle">B4 · 2,000–2,200 m</text>
         </g>
 
         <g transform="translate(940,70)">
           <circle r="20" fill="none" stroke="#283650"/>
           <path d="M0,-18 L5,4 L0,-2 L-5,4 Z" fill="#e6b24c"/>
-          <text x="0" y="-24" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="10" fill="#9aa6bd" text-anchor="middle">N</text>
+          <text x="0" y="-24" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="10" fill="#9aa6bd" text-anchor="middle">N</text>
         </g>
         <g transform="translate(820,490)">
           <line x1="0" y1="0" x2="134" y2="0" stroke="#9aa6bd" stroke-width="1.5"/>
           <line x1="0" y1="-4" x2="0" y2="4" stroke="#9aa6bd"/><line x1="134" y1="-4" x2="134" y2="4" stroke="#9aa6bd"/>
-          <text x="67" y="-8" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="10" fill="#9aa6bd" text-anchor="middle">≈ 20 km</text>
+          <text x="67" y="-8" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="10" fill="#9aa6bd" text-anchor="middle">≈ 20 km</text>
         </g>
       </svg>
       <div class="legend">
@@ -502,19 +502,19 @@
         <!-- captive band around Tecpan -->
         <ellipse cx="430" cy="95" rx="250" ry="60" fill="#e6b24c" opacity=".10"/>
         <ellipse cx="430" cy="95" rx="250" ry="60" fill="none" stroke="#e6b24c" stroke-opacity=".35" stroke-dasharray="4 5"/>
-        <text x="430" y="45" font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="10" fill="#e6b24c" text-anchor="middle">mercado cautivo ≤1.5 h · convergen 3 flujos</text>
+        <text x="430" y="45" font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="10" fill="#e6b24c" text-anchor="middle">mercado cautivo ≤1.5 h · convergen 3 flujos</text>
         <!-- main road -->
         <line x1="70" y1="95" x2="820" y2="95" stroke="#33425f" stroke-width="2"/>
         <!-- antigua branch -->
         <line x1="770" y1="95" x2="740" y2="160" stroke="#33425f" stroke-width="2"/>
         <!-- segment times -->
-        <g font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="10" fill="#9aa6bd">
+        <g font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="10" fill="#9aa6bd">
           <text x="325" y="86" text-anchor="middle">~1 h 15</text>
           <text x="600" y="86" text-anchor="middle">~1 h 40</text>
           <text x="700" y="140" text-anchor="middle">~1 h 10</text>
         </g>
         <!-- nodes -->
-        <g font-family="Avenir Next, Avenir, Mulish, sans-serif" font-size="10">
+        <g font-family="Avenir Next, Avenir, Source Sans 3, sans-serif" font-size="10">
           <g><circle cx="70" cy="95" r="5" fill="#7aa6dc"/><text x="70" y="120" fill="#cfe0f2" text-anchor="middle">Xela</text><text x="70" y="133" fill="#5a688a" text-anchor="middle">2ª ciudad</text></g>
           <g><circle cx="230" cy="95" r="6" fill="#7aa6dc"/><text x="230" y="120" fill="#cfe0f2" text-anchor="middle">Atitlán</text><text x="230" y="133" fill="#5a688a" text-anchor="middle">turismo mayor</text></g>
           <g><circle cx="430" cy="95" r="10" fill="#e6b24c"/><text x="430" y="122" fill="#f3d291" text-anchor="middle" font-weight="500">Tecpán</text><text x="430" y="135" fill="#9aa6bd" text-anchor="middle">Iximché · gastronomía</text></g>
